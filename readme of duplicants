@@ -1,0 +1,24 @@
+#duplicants
+removing same elements from the array
+##formate
+-importing the arraylist class
+-asking user for the size of an array
+-using for loop entering the array elements 
+-at the same time we are written a condition to dont allow the same elements
+-if the elements are different only we are going to add the elements into the array
+###output
+>enter the size of an array
+-5
+>enter the array elements
+-1
+-2
+-2
+-3
+-4
+>array after removing same elements
+-1
+-2
+-3
+-4
+####programe
+-java
