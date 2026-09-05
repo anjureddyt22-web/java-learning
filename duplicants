@@ -1,0 +1,21 @@
+import java.util.Scanner;
+import java.util.ArrayList;
+public class duplicants{
+    public static void main(String[] args){
+        Scanner sc=new Scanner(System.in);
+        ArrayList<Integer>a=new ArrayList<>();
+        System.out.println("enetr the size of array");
+        int n=sc.nextInt();
+        System.out.println("enter the array elements");
+        for(int i=0;i<n;i++){
+            int m=sc.nextInt();
+            if(!a.contains(m)){
+                a.add(m);
+            }
+        }     
+    System.out.println("array elemnts after removing duplicants");
+    for(int i=0;i<a.size();i++){
+        System.out.println(a.get(i));
+        }
+    }
+}
