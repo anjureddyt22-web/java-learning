@@ -1,0 +1,12 @@
+# celsius to fahrenheit converter
+##description
+this java programe converts temperature of celsius into fahrenheit
+##formula
+fahrenheit=(celsius*9/5)+32
+##examle
+###input
+25
+###output
+77.0
+##language used
+java
