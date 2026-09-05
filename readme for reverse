@@ -1,0 +1,33 @@
+#reverse of an array
+reversing the array by using for loop
+##features
+-asking user for the array size and array elements
+-accessing the array elements using
+> for(i=0;i<array size ;i++)
+-printing the array elements before reversing
+> for(i=0;i<array size ;i++)
+-printing array elements in reverse order
+> for(i=n-1;i<=0;i--)
+###sample output
+-enter the array size
+> 5
+-enter the array elements
+> 1
+> 2
+> 3
+> 4
+> 5
+-elements of an array before reversing
+> 1
+> 2
+> 3
+> 4
+> 5
+-elements of an array after reversing
+> 5
+> 4
+> 3
+> 2
+> 1
+####language
+java
