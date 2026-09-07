@@ -1,0 +1,22 @@
+import java.util.*;
+class eletricalBill{
+    public static void main(String[]args){
+        Scanner sc=new Scanner(System.in);
+        System.out.println("enter the no of units consumed");
+        int u=sc.nextInt();
+        int units;
+        if (u<=100){
+             units=u*1;
+        }
+        else if ( u <=200){
+            units=100*1+(u-100)*2;
+        }
+        else if (u <=300){
+            units=100*1+(100*2)+(u-200)*3;
+        }
+        else{
+            units=100*1+(100*20)+100*3+(u-300)*4;
+        }
+        System.out.println("eletricity bill =" +units);
+    }
+}
