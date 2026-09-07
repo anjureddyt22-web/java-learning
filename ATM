@@ -1,0 +1,18 @@
+import java.util.Scanner;
+class Atm{
+public static void main(String[]args){
+        Scanner sc=new Scanner(System.in);
+        System.out.println("enter the balance amount=");
+         int balance=sc.nextInt();
+        System.out.println("enter amount to withdraw=");
+        int withdraw=sc.nextInt();
+    if(balance>=withdraw){
+        int remaining=balance-withdraw;
+        System.out.println("withdraw successful");
+        System.out.println("reamaing balance is="+remaining);
+    }
+    else{
+        System.out.println("insafficent amount!");
+    }
+ }
+}
