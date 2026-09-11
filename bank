@@ -1,0 +1,32 @@
+class Account{
+    String name;
+    int an;
+    int balance;
+Account(String n,int a,int b){
+     name=n;
+     an=a;
+     balance=b;
+}
+ void deposite(){
+    int d=5000;
+    balance=balance+d;
+}
+ void withdraw(){
+    int w=2000;
+    balance-=w;
+}
+ void display(){
+    System.out.println("account holder: "+name);
+    System.out.println("account number: "+an);
+    System.out.println("balance ammount: "+balance);
+ }
+ public static void main(String []args){
+    Account ac=new Account("anjali",23455,10000);
+   
+    ac.deposite();
+    ac.withdraw();
+    ac.display();
+ }
+
+
+}
