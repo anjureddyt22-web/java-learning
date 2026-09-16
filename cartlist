@@ -1,0 +1,35 @@
+class cartList{
+    String name;
+    double price;
+    double quantity;
+
+    cartList(String n,double p,double q){
+        name=n;
+        price=p;
+        quantity=q;
+    }
+    double cost(){
+        double total1= price*quantity;
+        double d=0;
+        if(total1>5000)
+           d=total1*10/100;
+        double total2=total1+ d;
+        return total2;
+        
+    }
+    void display(){
+        System.out.println("name: "+ name);
+        System.out.println("price: "+price);
+         System.out.println("quantity: "+quantity);
+    }
+    public static void main(String [] args){
+        cartList c1=new cartList("pen",35,3);
+        cartList c2=new cartList("laptop",100000,1);
+        cartList c3=new cartList("mirror",234,1);
+        c1.display(); 
+        c2.display();
+        c3.display();
+        double p=c1.cost() + c2.cost() + c3.cost();
+        System.out.println("total cost: "+p);
+    }
+}
