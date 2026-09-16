@@ -1,0 +1,32 @@
+class product{
+    String name;
+    int id;
+    double price;
+    double quantity;
+
+    product(String n,int i,double p,double q){
+        name=n;
+        id=i;
+        price=p;
+        quantity=q;
+    }
+    double cost(){
+        return price*quantity;
+
+    }
+    void display(){
+        System.out.println("product name: " +name);
+        System.out.println("product id: "+id);
+        System.out.println("product price: "+price);
+        System.out.println("product quantity: "+quantity);
+    }
+    public static void main(String[] args){
+        product p1=new product("frock" ,22,234,2);
+        p1.display();
+        product p2=new product("kurtha",23,345,1);
+        p2.display();
+        double total=p1.cost() + p2.cost() ;
+        System.out.print("total cost: "+total);
+       
+    }
+}
