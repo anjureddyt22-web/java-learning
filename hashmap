@@ -1,0 +1,38 @@
+import java.util.*;
+class hash{
+    public static void main(String [] args){
+        Scanner sc=new Scanner(System.in);
+        HashMap<String,Integer>a=new HashMap<>();
+        System.out.println("enter number of student :");
+        int  n=sc.nextInt();
+        sc.nextLine();
+         for(int i=0;i<n;i++){
+            System.out.println("enter name of the stodent :");
+            String name=sc.next();
+            sc.nextLine();
+            System.out.println("enter total marks of a stodent : ");
+            int marks=sc.nextInt();
+            sc.nextLine();
+            a.put(name,marks);
+         }
+         System.out.println("student details :");
+        for(String name:a.keySet()){
+        System.out.println(name+" "+ a.get(name)); 
+        }
+        System.out.println("enter the student name to search :");
+        String s=sc.nextLine();
+        System.out.println(a.containsKey(s));
+        String topper="";
+        int high=0;
+        for(String name:a.keySet()){
+            int marks=a.get(name);
+            if(marks>high){
+                high=marks;
+                topper=name;
+            }
+        }
+            System.out.println("higest marks :");
+            System.out.println(topper +" "+ high);
+        
+    }
+}
