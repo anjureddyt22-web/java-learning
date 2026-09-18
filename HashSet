@@ -1,0 +1,30 @@
+
+import java.util.*;
+class student{
+    public static void main(String[] args){
+        Scanner sc=new Scanner(System.in);
+        HashSet<String>c=new HashSet<>();
+         System.out.println("enter number of atudents");
+         int n=sc.nextInt();
+         for(int i=0;i<n;i++){
+            System.out.println("enter course");
+            String course=sc.next();
+            sc.nextLine();
+            c.add(course); 
+         }
+          System.out.println(c);
+          System.out.println("enter course to remove");
+         String r=sc.next();
+         sc.nextLine();
+         c.remove(r);
+         System.out.print("enter course to search");
+         String s=sc.next();
+         sc.nextLine();
+          System.out.println(c.contains(s));
+         System.out.println("size :" +c.size());
+         System.out.println(c);
+         c.clear();
+         System.out.println(c);
+
+    }
+}
