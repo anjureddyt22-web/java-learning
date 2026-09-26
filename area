@@ -1,0 +1,21 @@
+import java.util.*;
+class area{
+    area(double r){
+        double circle=Math.PI*r*r;
+        System.out.println(circle);
+    }
+    area(int l,int b){
+        int rectangle=l*b;
+        System.out.println(rectangle);
+    }
+    area(int r){
+        int square=r*r*r;
+        System.out.println(square);
+    }
+    public static void main(String[] args){
+        area c=new area(2.4);
+        area r=new area(2,5);
+        area s=new area(5);
+       
+    }
+}
