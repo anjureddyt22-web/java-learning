@@ -1,0 +1,37 @@
+import java.util.*;
+class Main{
+    int add(int a,int b){
+        return a+b;
+    }
+    int sub(int a,int b){
+        return a-b;
+    }
+    int div(int a,int b){
+        return a/b;
+    }
+    int mul(int a,int b){
+        return a*b;
+    }
+    public static void main(String [] args){
+        Scanner sc=new Scanner(System.in);
+        System.out.println("enter amount to perform action:");
+        int n=sc.nextInt();
+        int m=sc.nextInt();
+        Main s1=new Main();
+        System.out.println("enter the type of action to perform:");
+        String opp=sc.next();
+        if(opp.equals("add")){
+            System.out.println(s1.add(n,m));
+        }
+        else if(opp.equals("sub")){
+         System.out.println(s1.sub(n,m));
+        }
+        else if(opp.equals("mult")){
+            System.out.println(s1.mul(n,m));
+        }
+        else{
+            System.out.println(s1.div(n,m));
+        }
+        
+    }
+}      
