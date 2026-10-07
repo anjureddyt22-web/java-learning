@@ -1,0 +1,43 @@
+import java.util.*;
+class solution {
+    public String addBinary(String a, String b) {
+int i = a.length() - 1;
+int j = b.length() - 1;
+int carry = 0;
+
+StringBuilder result = new StringBuilder();
+
+while (i >= 0 || j >= 0 || carry != 0) {
+
+    int an = 0;
+    int bn = 0;
+
+    if (i >= 0) {
+        an = a.charAt(i) - '0';
+        i--;
+    }
+
+    if (j >= 0) {
+        bn = b.charAt(j) - '0';
+        j--;
+    }
+
+    int sum = an + bn + carry;
+
+    int digit = sum % 2;
+    carry = sum / 2;
+
+    result.append(digit);
+}
+
+return result.reverse().toString();
+}
+public static void main(String [] args){
+    Scanner sc=new Scanner(System.in);
+    String a=sc.next();
+    String b=sc.next();
+    solution s=new solution();
+    String re=s.addBinary(a,b);
+    System.out.print(re);
+}
+}
