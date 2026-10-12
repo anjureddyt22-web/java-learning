@@ -1,0 +1,14 @@
+interface payment{
+    void pay(double amount);
+}
+class upi implements payment{
+    public void pay(double amount){
+        System.out.println("amount:"+amount);
+    }
+}
+class main{
+    public static void main(String [] args){
+        payment p=new upi();
+        p.pay(2334.77);
+    }
+}
