@@ -1,0 +1,20 @@
+class employee{
+    float salary=25000;
+    void display(){
+        System.out.println("employee salary details:");
+    }
+}
+class developer extends employee{
+    float salary=super.salary+2000;
+    void show(){
+         super.display();
+         System.out.println("emloyee salary during joining:"+super.salary);
+         System.out.println("emloyee salary after 1 year:"+salary);
+    }
+}
+class main{
+    public static void main(String [] args){
+        developer d=new developer();
+        d.show();
+    }
+}
