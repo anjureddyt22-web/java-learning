@@ -1,0 +1,35 @@
+interface vechicle{
+    void start();
+    void stop();
+}
+class car implements vechicle{
+   
+    public void start(){
+        System.out.println("car is starting");
+    }
+    public void stop(){
+        System.out.println("car is stoping");
+    }
+}
+
+class cycle implements vechicle{
+   
+    public void start()
+    {
+        System.out.println("cycle is starting");
+    }
+    public void stop(){
+        System.out.println("cycle is stoping");
+    }
+}
+
+class main{
+    public static void main(String [] args){
+     vechicle mcar=new car();
+     vechicle mbike=new cycle();
+     mcar.start();
+     mcar.stop();
+     mbike.start();
+     mbike.stop();
+    }
+  }
