@@ -1,0 +1,33 @@
+class shape{
+    double area(){
+        return 0;
+    }
+}
+class circle extends shape{
+    double radius;
+    circle(double radius){
+        this.radius=radius;
+    }
+    double area(){
+        return Math.PI*radius*radius;
+    }
+}
+class rectangle extends shape{
+    double width,height;
+    rectangle(double width,double height){
+        this.width=width;
+        this.height=height;
+    }
+    double area(){
+        return width*height;
+    }
+}
+public class total{
+    public static void main(String [] args){
+        shape myshape;
+        myshape=new circle(5);
+        System.out.println(myshape.area());
+    myshape=new rectangle(4,6);
+    System.out.println(myshape.area());
+    }
+}
