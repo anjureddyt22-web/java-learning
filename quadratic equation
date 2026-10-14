@@ -1,0 +1,32 @@
+import java.util.*;
+class QuadraticEquation{
+    public static void main(String [] args){
+        int a,b,c;
+        double r1,r2,d;
+        Scanner sc=new Scanner(System.in);
+        System.out.println("enter a value");
+        a=sc.nextInt();
+         System.out.println("enter b value");
+        b=sc.nextInt();
+         System.out.println("enter c value");
+        c=sc.nextInt();
+        d=b*b-(4*a*c);
+        if(d==0){
+            System.out.println("roots are real and equal");
+            r1=(-b)/(2.0*a);
+            System.out.println("root:"+r1);
+
+        }else if(d>0){
+            System.out.println("roots are real and unequal");
+            r1=(-b +Math.sqrt(d))/(2*a);
+
+            r2=(-b - Math.sqrt(d))/(2*a);
+            System.out.println("1st root:"+r1);
+            System.out.println("2nd root:"+r2);
+            
+        }else{
+            System.out.println("roots are imaginary.");
+        }
+
+    }
+}
