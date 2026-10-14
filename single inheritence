@@ -1,0 +1,26 @@
+class person{
+    String name;
+    int age;
+    void display(){
+        System.out.println("name:"+ name);
+        System.out.println("age:"+age);
+    }
+}
+class student extends person{
+    String id;
+    void show(){
+        display();
+        System.out.println("student id:"+id);
+    }
+}
+class good{
+    public static void main(String [] args){
+        student s=new student();
+        s.name="anjali";
+        s.age=20;
+        s.id="252TA31401";
+        s.show();
+        System.out.println();
+        s.display();
+    }
+}
