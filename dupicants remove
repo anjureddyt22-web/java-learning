@@ -1,0 +1,34 @@
+import java.util.Arrays;
+import java.util.Scanner;
+class main{
+    public static void main(String [] args){
+        Scanner sc=new Scanner(System.in);
+        int n=sc.nextInt();
+        int [] a=new int [n];
+        for(int i=0;i<n;i++){
+            a[i]=sc.nextInt();
+        }
+        int r=sc.nextInt();
+        remove q=new remove();
+        a=q.removeEle(a, r);
+        System.out.println(Arrays.toString(a));
+    }
+}
+class remove{
+    public int[] removeEle(int a[],int r){
+        int cnt=0;
+        for(int v:a){
+            if(v!=r){
+                cnt++;
+            }
+        }
+        int [] n=new int[cnt];
+        int index=0;
+        for(int vi:a){
+           if(vi!=r){
+             n[index++]=vi;
+           }
+        }
+return n;
+    }
+}
