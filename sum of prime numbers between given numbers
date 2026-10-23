@@ -1,0 +1,33 @@
+import java.util.Scanner;
+
+class prime{
+    public int num(int x,int y){
+        int s=Math.min(x, y);
+        int e=Math.max(x,y);
+        int sum=0;
+            for(int i=s;i<=e;i++){
+                if(isPrime(i)){
+                    sum=sum+s;
+                }
+            }
+            return sum;
+        }
+ boolean isPrime(int n){
+        for(int j=2;j<=n/2;j++){
+            if(n%j==0){
+                return false;
+            }
+        }
+        
+    return true;
+    }
+}
+class main{
+    public static void main(String [] args){
+        Scanner sc=new Scanner(System.in);
+        int x=sc.nextInt();
+        int y=sc.nextInt();
+        prime p=new prime();
+        System.out.print(p.num(x,y));
+    }
+}
