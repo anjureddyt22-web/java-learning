@@ -1,0 +1,37 @@
+import java.util.Scanner;
+
+class printNumber implements Runnable{
+    int start;
+    int end;
+    printNumber(int s ,int e){
+        this.start=s;
+        this.end=e;
+    }
+    public void run(){
+        for(int i=start;i<=end;i+=2){
+            System.out.println(Thread.currentThread().getName()+ " :"+i);
+
+        }
+    }
+}
+class main{
+    public static void main(String [] args){
+        Scanner sc=new Scanner(System.in);
+        int es=sc.nextInt();
+        int ee=sc.nextInt();
+        int os=sc.nextInt();
+        int oe=sc.nextInt();
+        Thread eveenThread=new Thread(new printNumber(es, ee),"eveenThread" );
+         Thread oddThread=new Thread(new printNumber(os,oe),"oddThread" );
+         
+         try{
+eveenThread.start();
+eveenThread.join();
+         oddThread.start();
+         oddThread.join();
+         }
+         catch(InterruptedException e){
+            e.printStackTrace();
+         }
+    }
+}
